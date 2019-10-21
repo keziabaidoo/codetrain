@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../static/css/seeUser.css">
+</head>
+<body>
+	
+{{if users:}}
+  {{for user in users:}}
+       <p>
+       	  <table>
+       	  	<tr>
+       	  		<td>
+       	first name is {{=user.db_firstname}}, last name is 
+       	{{=user.db_lastname}}, email is {{=user.db_email}}
+       	</td></tr>
+       	</table>
+       	</p>
+  {{pass}}
+{{else:}}
+    <h2>No User Found</h2>
+{{pass}}
+
+
+</body>
+</html>
+
